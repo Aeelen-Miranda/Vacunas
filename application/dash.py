@@ -61,8 +61,7 @@ body = html.Div([
            ]),
 #Cintillo 00    
     dbc.Row(
-           [dcc.Dropdown(
-        id="dropdown",
+           [dbc.Col(dcc.Dropdown(id="dropdown"),
         options=[{"label": x, "value": x} for x in Farmacéuticas],
         value=Farmacéuticas[0],
         clearable=False,
