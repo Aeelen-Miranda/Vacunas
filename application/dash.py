@@ -46,10 +46,19 @@ body = html.Div([
         dbc.Row(
            [
                dbc.Col(dbc.CardImg(src="https://github.com/fdealbam/Vacunas/blob/main/SALUD.JPG?raw=true"),
-                        width={'size': 1,  "offset": 1}),
-               dbc.Col(html.H2("ARIBO DE VACUNAS"),
-                        width={'offset' : 2}),
-           ]),
+                        width=2, lg={'size': 3,  "offset": 1})]),
+    dbc.Row(
+        [    dbc.Col(html.H2("ARRIBO DE VACUNAS"),
+                        lg={'offset' : 3 }),
+              dbc.Col(html.H3("DIRECCIÓN GENERAL DE COMUNICACIÓN SOCIAL"),
+                  width={'size' : 7,
+                         'offset' : 3, 
+                         'color' : 'danger'
+                        }), 
+                
+
+            ],justify="start"),
+        
 # Top Banner
 
        html.Hr(),
@@ -75,6 +84,30 @@ body = html.Div([
                       style={'width': '100%', 'display': 'inline-block',
                             'align': 'center'}),
 ]),
+    dbc.Row(
+    [dbc.Toast([html.P("Este jueves México recibió el quinto embarque de vacunas "
+           "contra COVID-19 producidas por la farmacéutica Sinovac Life Sciences Co., Ltd."
+           "Se trata de un millón de dosis envasadas que, sumadas a las 200 mil que llegaron "
+               " el 20 de febrero, 800 mil el 27 febrero, un millón del 13 de marzo y otro el"
+               "18 de marzo, hacen un total de cuatro millones provenientes del laboratorio con"
+               "sede en China. El biológico salió del Aeropuerto Internacional de Beijing, China;"
+               "hizo escala en Hong Kong, después en Anchorage, Alaska, para ser enviado a México "
+               "en el vuelo CX86 de la aerolínea Cathay Pacific. El vuelo arribó a las 4.34 h a "
+               " la terminal 1 del Aeropuerto Internacional de la Ciudad de México (AICM) "
+               "“Benito Juárez”. La Comisión Federal para la Protección de Riesgos Sanitarios "
+               "(Cofepris) el pasado 9 de febrero emitió la autorización de para el uso de "
+               "emergencia. México ha recibido 9 millones 818 mil 375 dosis de vacunas "
+               "envasadas de las farmacéuticas: Pfizer-BioNTech, AstraZeneca, Sinovac y del"
+               "Centro Nacional de Investigación de Epidemiología y Microbiología Gamaleya;"
+               " asimismo, en nuestro país, el laboratorio Drugmex ha envasado 940 mil 470 "
+               "dosis de la vacuna CanSino Biologics, lo que hace un total de 10 millones 758 "
+               "mil 845 biológicos.Hasta hoy se han recibido 21 embarques -35 vuelos"
+                       , className="lead")],
+    header= "FICHA TÉCNICA ",
+               style={"position": "static",# "top": 66, "right": 10,
+                     'width': '100%',
+                     },
+              )])
     
 ])
 
