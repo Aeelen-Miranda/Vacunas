@@ -61,12 +61,19 @@ body = html.Div([
            ]),
 #Cintillo 00    
     dbc.Row(
-           [dbc.Col(dcc.Dropdown(id="dropdown"),
+           [dcc.Dropdown(
+        id="dropdown",
         options=[{"label": x, "value": x} for x in Farmacéuticas],
         value=Farmacéuticas[0],
         clearable=False,
-    ),
-    dcc.Graph(id="bar-chart"),
+               #width={'size' : 6,'offset' : 1 },
+                  style={'width': '100%', 'display': 'inline-block','text-size': 28}),
+
+   
+    dcc.Graph(id="bar-chart", figure={},
+              className="top_metrics",
+                      style={'width': '100%', 'display': 'inline-block',
+                            'align': 'center'}),
 ]),
     
 ])
@@ -83,6 +90,7 @@ def update_bar_chart(Farmacéutica):
     
     
 app.layout = html.Div([body])
+
 from application.dash import app
 from settings import config
 
