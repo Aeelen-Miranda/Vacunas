@@ -47,7 +47,7 @@ body = html.Div([
            [
                dbc.Col(dbc.CardImg(src="https://github.com/fdealbam/Vacunas/blob/main/SALUD.JPG?raw=true"),
                         width={'size': 1,  "offset": 1}),
-               dbc.Col(html.H2("ARIBO DE VACUNAS"),
+               dbc.Col(html.H2("ARRIBO DE VACUNAS"),
                         width={'offset' : 2}),
            ]),
 # Top Banner
