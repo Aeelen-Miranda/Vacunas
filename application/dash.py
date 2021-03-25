@@ -38,7 +38,8 @@ vacunas.rename(columns={'FarmacÃ©utica': 'Farmacéutica' },inplace=True,
 df = vacunas
 Farmacéuticas = df.Farmacéutica.unique()
 
-app = dash.Dash(__name__)
+server = flask.Flask(__name__)
+app = dash.Dash(__name__, external_stylesheets=[dbc.themes. LUX], server=server)
 
 body = html.Div([
 # Cintillo 000
@@ -83,4 +84,8 @@ def update_bar_chart(Farmacéutica):
     
     
 app.layout = html.Div([body])
-app.run_server()
+from application.dash import app
+from settings import config
+
+if __name__ == "__main__":
+    app.run_server()
