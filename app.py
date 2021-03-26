@@ -1,3 +1,6 @@
+import dash
+import matplotlib.pyplot as plt 
+import dash_bootstrap_components as dbc
 import dash_core_components as dcc
 import dash_html_components as html
 import pandas as pd
@@ -117,9 +120,10 @@ body = html.Div([
        html.Hr(),    
 dbc.Row(
            [
-               #dbc.Col(dbc.CardImg(src="https://raw.githubusercontent.com/fdealbam/Vacunas/main/srelogo.png?raw=true"),
-               #         lg={'size': 1,  "offset": 1}),
-               dbc.Col(html.H5("Subsecretaría de Asuntos Multilaterales"),
+               dbc.Col(dbc.CardImg(src="https://github.com/Aeelen-Miranda/Vacunas/blob/main/SRE.JPG?raw=true"),
+                       lg={'size': 1.5,  "offset": 10}),
+               dbc.Col(
+                   html.H5("Subsecretaría de Asuntos Multilaterales"),
                         lg={'size': 6,  'offset' : 1}),
            ],justify="start"),    
     
